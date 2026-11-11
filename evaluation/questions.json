@@ -1,0 +1,76 @@
+[
+  {
+    "question": "Which companies collaborate with Salesforce?",
+    "ground_truth": "Google, OpenAI, Hugging Face and Cohere (through joint collaborations with Google/OpenAI, Hugging Face/OpenAI, and OpenAI/Cohere).",
+    "hops": "multi",
+    "key_facts": [
+      "Google",
+      "OpenAI",
+      "Hugging Face",
+      "Cohere"
+    ]
+  },
+  {
+    "question": "Which company partners with Oracle and also collaborates with Salesforce?",
+    "ground_truth": "Cohere. Oracle and Cohere formed a partnership, and OpenAI, Cohere and Salesforce collaborated on cloud computing research.",
+    "hops": "multi",
+    "key_facts": [
+      "Cohere"
+    ]
+  },
+  {
+    "question": "Is Google connected to Hugging Face? If so, through which companies?",
+    "ground_truth": "Yes. Google collaborates with Salesforce and OpenAI, and both Salesforce and OpenAI collaborate with Hugging Face.",
+    "hops": "multi",
+    "key_facts": [
+      "Salesforce",
+      "OpenAI"
+    ]
+  },
+  {
+    "question": "Which of Amazon's robotics research partners also collaborate with each other?",
+    "ground_truth": "AMD and Apple. Amazon, AMD and Apple announced a joint robotics research collaboration.",
+    "hops": "multi",
+    "key_facts": [
+      "AMD",
+      "Apple"
+    ]
+  },
+  {
+    "question": "Who collaborates with Cohere?",
+    "ground_truth": "Oracle (strategic partnership) and OpenAI and Salesforce (joint cloud computing research).",
+    "hops": "multi",
+    "key_facts": [
+      "Oracle",
+      "OpenAI",
+      "Salesforce"
+    ]
+  },
+  {
+    "question": "Which companies collaborate with Microsoft?",
+    "ground_truth": "Stability AI and Amazon (joint autonomous systems research). Microsoft also acquired OpenAI.",
+    "hops": "single",
+    "key_facts": [
+      "Stability AI",
+      "Amazon"
+    ]
+  },
+  {
+    "question": "Who did Anthropic invest in, and how much?",
+    "ground_truth": "Nvidia, a $20 billion investment.",
+    "hops": "single",
+    "key_facts": [
+      "Nvidia",
+      "20 billion"
+    ]
+  },
+  {
+    "question": "Who did Microsoft acquire and for how much?",
+    "ground_truth": "OpenAI, for $2 billion.",
+    "hops": "single",
+    "key_facts": [
+      "OpenAI",
+      "2 billion"
+    ]
+  }
+]

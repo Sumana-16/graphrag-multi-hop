@@ -1,0 +1,240 @@
+{
+  "summary": {
+    "model": "gemini-3.1-flash-lite",
+    "overall": {
+      "questions": 8,
+      "fact_recall": {
+        "graphrag": 0.938,
+        "standard_rag": 0.875,
+        "plain_llm": 0.177
+      },
+      "llm_judge": {
+        "graphrag": 0.812,
+        "standard_rag": 0.725,
+        "plain_llm": 0.1
+      }
+    },
+    "multi_hop": {
+      "questions": 5,
+      "fact_recall": {
+        "graphrag": 0.9,
+        "standard_rag": 0.8,
+        "plain_llm": 0.283
+      },
+      "llm_judge": {
+        "graphrag": 0.92,
+        "standard_rag": 0.56,
+        "plain_llm": 0.1
+      }
+    },
+    "single_hop": {
+      "questions": 3,
+      "fact_recall": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.0
+      },
+      "llm_judge": {
+        "graphrag": 0.633,
+        "standard_rag": 1.0,
+        "plain_llm": 0.1
+      }
+    }
+  },
+  "results": [
+    {
+      "question": "Which companies collaborate with Salesforce?",
+      "hops": "multi",
+      "ground_truth": "Google, OpenAI, Hugging Face and Cohere (through joint collaborations with Google/OpenAI, Hugging Face/OpenAI, and OpenAI/Cohere).",
+      "key_facts": [
+        "Google",
+        "OpenAI",
+        "Hugging Face",
+        "Cohere"
+      ],
+      "scores": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.2
+      },
+      "fact_recall": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.25
+      },
+      "answers": {
+        "graphrag": "Based on the provided context, Salesforce collaborates with the following companies: Google, OpenAI, Hugging Face, and Cohere.",
+        "standard_rag": "Based on the provided documents, the companies that collaborate with Salesforce are:\n\n*   **OpenAI** (Document 2, Document 3, Document 5)\n*   **Cohere** (Document 2)\n*   **Google** (Document 3)\n*   **Hugging Face** (Document 5)",
+        "plain_llm": "Salesforce maintains a vast ecosystem of partners, often referred to as the **Salesforce AppExchange**. Because Salesforce is a platform-based company, its \"collaborators\" fall into several distinct categories.\n\nHere are the key groups of companies that collaborate with Salesforce:\n\n### 1. Global Strategic Consulting Partners\nThese firms help enterprise-level clients implement, customize, and manage Salesforce products.\n*   **Accenture:** One of Salesforce\u2019s largest implementation partners.\n*   **Deloitte Digital:** Focuses on digital transformation and strategy.\n*   **IBM (IBM Consulting):** Integrates Salesforce with AI (Watson) and cloud infrastructure.\n*   **Capgemini:** Provides large-scale global implementation services.\n*   **Publicis Sapient:** Focuses on customer experience (CX) and digital marketing transformation.\n\n### 2. Technology & Cloud Partners (Integration Partners)\nThese companies provide the infrastructure or software that integrates directly into the Salesforce ecosystem.\n*   **Amazon Web Services (AWS):** A primary cloud infrastructure partner. Salesforce and AWS have a deep partnership allowing for seamless data sharing between Salesforce and AWS services.\n*   **Google Cloud:** Partners on data analytics and marketing integrations (e.g., connecting Salesforce Marketing Cloud with Google Analytics).\n*   **Microsoft:** Despite being a competitor in some areas, the two companies have a long-standing partnership to ensure integration between Salesforce and Microsoft 365, Teams, and Azure.\n*   **Snowflake:** A major partner for data sharing; the two companies developed \"Salesforce Data Cloud,\" which allows organizations to share data across platforms without moving it.\n\n### 3. AppExchange Partners (ISVs)\nIndependent Software Vendors (ISVs) build applications on top of the Salesforce platform. Thousands of companies collaborate this way; some of the most notable include:\n*   **DocuSign:** Integrates e-signature capabilities directly into Salesforce workflows.\n*   **Slack:** Now owned by Salesforce, it remains the primary communication/collaboration hub for the platform.\n*   **Tableau:** Also owned by Salesforce, it serves as the primary data visualization tool within the ecosystem.\n*   **ZoomInfo:** Provides B2B data and intelligence directly inside Salesforce CRM.\n*   **RingCentral / Twilio:** Provide communication and telephony integrations.\n\n### 4. Marketing & Commerce Partners\n*   **Meta (Facebook/Instagram):** Deep integration for advertising and lead generation (Salesforce Advertising Studio).\n*   **LinkedIn:** Collaborates on Sales Navigator integrations to help sales teams track leads and professional relationships.\n\n### 5. Summary of the \"Salesforce Economy\"\nSalesforce functions as a \"platform-as-a-service\" (PaaS). Therefore, any company that builds an application on the **Lightning Platform** or lists an app on the **AppExchange** is technically a collaborator. \n\nIf you are looking for a specific type of partner (e.g., a marketing agency, a cloud service provider, or a software developer), you can always verify a company\u2019s status by checking the **[Salesforce AppExchange website](https://appexchange.salesforce.com/)**, which acts as the official directory for all verified partners."
+      }
+    },
+    {
+      "question": "Which company partners with Oracle and also collaborates with Salesforce?",
+      "hops": "multi",
+      "ground_truth": "Cohere. Oracle and Cohere formed a partnership, and OpenAI, Cohere and Salesforce collaborated on cloud computing research.",
+      "key_facts": [
+        "Cohere"
+      ],
+      "scores": {
+        "graphrag": 1.0,
+        "standard_rag": 0.8,
+        "plain_llm": 0.0
+      },
+      "fact_recall": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.0
+      },
+      "answers": {
+        "graphrag": "**Cohere** is the company that partners with Oracle and also collaborates with Salesforce.",
+        "standard_rag": "Answer: Cohere",
+        "plain_llm": "Answer: **Accenture** is a prominent example of a company that maintains strong strategic partnerships with both Oracle and Salesforce. Other major global consulting and technology services firms, such as **Deloitte**, **Capgemini**, and **PwC**, also hold significant partnership status with both vendors."
+      }
+    },
+    {
+      "question": "Is Google connected to Hugging Face? If so, through which companies?",
+      "hops": "multi",
+      "ground_truth": "Yes. Google collaborates with Salesforce and OpenAI, and both Salesforce and OpenAI collaborate with Hugging Face.",
+      "key_facts": [
+        "Salesforce",
+        "OpenAI"
+      ],
+      "scores": {
+        "graphrag": 0.6,
+        "standard_rag": 0.0,
+        "plain_llm": 0.0
+      },
+      "fact_recall": {
+        "graphrag": 0.5,
+        "standard_rag": 0.0,
+        "plain_llm": 0.5
+      },
+      "answers": {
+        "graphrag": "Yes, Google is connected to Hugging Face through Salesforce.",
+        "standard_rag": "Based on the provided documents, there is no information indicating that Google is connected to Hugging Face.",
+        "plain_llm": "Yes, Google is connected to Hugging Face, primarily through **strategic partnerships** and **financial investment**.\n\nHere is how those connections are structured:\n\n### 1. Strategic Partnership\nIn August 2023, Hugging Face and Google Cloud announced a major strategic partnership. The goal of this collaboration is to make Google Cloud\u2019s infrastructure (specifically TPU and GPU accelerators) more easily accessible to the Hugging Face community. This allows developers to train, fine-tune, and serve open-source models using Google\u2019s hardware platforms directly within the Hugging Face ecosystem.\n\n### 2. Financial Investment\nGoogle is one of the primary investors in Hugging Face. In August 2023, Hugging Face raised $235 million in a Series D funding round at a $4.5 billion valuation. Google was a lead investor in this round, joined by other major tech companies including:\n*   **NVIDIA**\n*   **Amazon (AWS)**\n*   **Microsoft (Azure)**\n*   **Salesforce**\n*   **AMD**\n*   **Intel**\n*   **IBM**\n*   **Qualcomm**\n\n### Nature of the Relationship\nIt is important to note that while Google is an investor and a cloud partner, **Hugging Face remains an independent company.** The relationship is designed to be \"cloud-agnostic.\" Hugging Face maintains similar partnerships with other major cloud providers (AWS and Microsoft Azure), ensuring that its platform remains the \"Switzerland\" of the AI industry, allowing users to deploy models on whichever cloud infrastructure they prefer."
+      }
+    },
+    {
+      "question": "Which of Amazon's robotics research partners also collaborate with each other?",
+      "hops": "multi",
+      "ground_truth": "AMD and Apple. Amazon, AMD and Apple announced a joint robotics research collaboration.",
+      "key_facts": [
+        "AMD",
+        "Apple"
+      ],
+      "scores": {
+        "graphrag": 1.0,
+        "standard_rag": 0.0,
+        "plain_llm": 0.0
+      },
+      "fact_recall": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.0
+      },
+      "answers": {
+        "graphrag": "Based on the provided context, the robotics research partners of Amazon are **AMD** and **Apple**. Among these partners, AMD and Apple collaborate with each other.",
+        "standard_rag": "Based on the provided documents, there are no instances of Amazon's robotics research partners collaborating with each other.\n\n*   Amazon's robotics research partners are AMD, Apple (Document 1), Microsoft, and Stability AI (Document 2). \n*   None of these companies (AMD, Apple, Microsoft, or Stability AI) are listed as collaborators with one another in the provided documents.",
+        "plain_llm": "Amazon\u2019s robotics research is primarily conducted through the **Amazon Robotics AI** initiative and collaborative research grants with top-tier academic institutions.\n\nIdentifying a single network of \"partners who collaborate with each other\" is complex because these universities operate as independent research hubs. However, they frequently overlap in the following ways:\n\n### 1. Multi-University Research Consortia\nSeveral of Amazon\u2019s primary robotics partners are part of the same massive research ecosystems. When Amazon funds research at these institutions, they are often tapping into cross-institutional projects that already exist:\n*   **The National Science Foundation (NSF) AI Research Institutes:** Institutions like **MIT, UC Berkeley, Carnegie Mellon University (CMU), and the University of Washington** are frequent partners for Amazon. These same universities collaborate extensively under NSF-funded umbrellas (such as the AI Institute for Collaborative Assistance and Responsive Interaction for Networked Groups).\n*   **The Robotics Research Alliance:** Institutions like **CMU, Georgia Tech, and UPenn** often collaborate on government-funded grants (such as those from DARPA or the Department of Defense), which creates an interconnected web of researchers who later consult or partner with Amazon Robotics.\n\n### 2. Shared Talent and Faculty \"Nodes\"\nMany of the lead scientists at Amazon\u2019s robotics labs are former professors or PhDs from these partner schools. Consequently, collaboration happens through **shared research publications and student exchanges**. For example:\n*   **MIT and Harvard:** These two institutions share the **Harvard-MIT Health Sciences and Technology** program and have a long history of joint robotics research. Amazon collaborates with both, often seeing the same teams publish papers co-authored by researchers from both universities.\n*   **UC Berkeley and Stanford:** These two schools frequently collaborate on AI and robotics research (often under the umbrella of the **Stanford-Berkeley AI Lab, or SAIL**). Amazon is a major sponsor of research at both, meaning the technology developed for Amazon is often the product of inter-university collaboration.\n\n### 3. The \"Amazon Research Awards\" (ARA) Network\nAmazon distributes awards to researchers at various universities annually. Because these awards are public, they create a community where researchers from **UT Austin, Georgia Tech, and CMU** often end up on the same research papers or workshop panels at major robotics conferences like **ICRA** (International Conference on Robotics and Automation) or **RSS** (Robotics: Science and Systems). \n\n### Summary of Interconnected Partners\nIf you are looking for the strongest hubs of collaboration that also work with Amazon, focus on these clusters:\n1.  **The \"Bay Area\" Cluster:** **Stanford and UC Berkeley** (Heavy collaboration on reinforcement learning and dexterous manipulation).\n2.  **The \"Northeast\" Cluster:** **MIT and Harvard** (Collaboration on soft robotics and human-robot interaction).\n3.  **The \"National AI\" Cluster:** **CMU, Georgia Tech, and the University of Washington** (These schools frequently partner on large-scale DARPA/NSF robotics challenges).\n\n**In short:** While Amazon does not necessarily \"mandate\" that their partners work together, their partners operate in an insular academic community where the same professors, PhD students, and labs frequently co-author research regardless of Amazon's involvement."
+      }
+    },
+    {
+      "question": "Who collaborates with Cohere?",
+      "hops": "multi",
+      "ground_truth": "Oracle (strategic partnership) and OpenAI and Salesforce (joint cloud computing research).",
+      "key_facts": [
+        "Oracle",
+        "OpenAI",
+        "Salesforce"
+      ],
+      "scores": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.3
+      },
+      "fact_recall": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.6666666666666666
+      },
+      "answers": {
+        "graphrag": "Cohere collaborates with Oracle, OpenAI, and Salesforce.",
+        "standard_rag": "Based on the provided documents, Cohere collaborates with:\n\n*   **Oracle** (Document 1)\n*   **OpenAI** (Document 2)\n*   **Salesforce** (Document 2)",
+        "plain_llm": "Cohere collaborates with a wide range of partners across the technology, cloud infrastructure, and enterprise sectors to integrate its large language models (LLMs) into various platforms and services.\n\nKey collaborators include:\n\n*   **Major Cloud Service Providers:** Cohere is integrated into the major cloud marketplaces, allowing businesses to deploy its models within their existing environments. Key partners include:\n    *   **AWS (Amazon Web Services):** Available via Amazon Bedrock and Amazon SageMaker.\n    *   **Google Cloud:** Available via Vertex AI.\n    *   **Oracle Cloud Infrastructure (OCI):** Cohere\u2019s models are a core component of the Oracle Generative AI service, and Oracle is a major strategic investor.\n    *   **Microsoft Azure:** Available via Azure Machine Learning.\n*   **Consulting and Professional Services:** Cohere partners with global consulting firms to help enterprises implement AI solutions. Notable partners include **Accenture**, **Deloitte**, and **EY**.\n*   **Software and Enterprise Platforms:** Cohere works with companies to embed generative AI capabilities into business applications and developer tools, including:\n    *   **Salesforce:** Integration into the Salesforce Einstein 1 Platform.\n    *   **Notion:** Cohere provides underlying technology for some of Notion's AI features.\n    *   **Canto:** Collaboration on AI-driven digital asset management.\n    *   **Jasper:** Leveraging Cohere\u2019s models for marketing and content generation tools.\n*   **Vector Database and Infrastructure Providers:** To enhance Retrieval-Augmented Generation (RAG) capabilities, Cohere maintains strong partnerships with database companies such as **Pinecone**, **Weaviate**, **Milvus**, and **MongoDB**.\n*   **Global Systems Integrators:** Beyond the big consulting firms, they partner with specialized AI firms like **Scale AI** and various regional technology providers to customize and deploy AI models for specific industry needs.\n\nIn essence, Cohere\u2019s business model focuses on being \"cloud-agnostic,\" meaning they prioritize being available everywhere their enterprise customers host their data, rather than being tied to a single cloud ecosystem."
+      }
+    },
+    {
+      "question": "Which companies collaborate with Microsoft?",
+      "hops": "single",
+      "ground_truth": "Stability AI and Amazon (joint autonomous systems research). Microsoft also acquired OpenAI.",
+      "key_facts": [
+        "Stability AI",
+        "Amazon"
+      ],
+      "scores": {
+        "graphrag": 0.9,
+        "standard_rag": 1.0,
+        "plain_llm": 0.3
+      },
+      "fact_recall": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.0
+      },
+      "answers": {
+        "graphrag": "Based on the provided context, Microsoft collaborates directly with Stability AI and Amazon. Additionally, while documents indicate Microsoft acquired OpenAI, the knowledge graph and provided text do not explicitly classify that acquisition as a collaborative partnership in the same manner as the joint autonomous systems research involving Stability AI and Amazon.",
+        "standard_rag": "Based on the provided documents, Microsoft collaborates with the following companies:\n\n*   **Stability AI** (Document 1)\n*   **Amazon** (Document 1)\n*   **OpenAI** (Document 2 - via acquisition)",
+        "plain_llm": "Microsoft collaborates with a vast network of companies across virtually every sector of the technology industry. Because Microsoft operates as both a platform provider and an enterprise service company, these collaborations take many forms, including hardware manufacturing, cloud infrastructure integration, software development, and strategic AI partnerships.\n\nHere are some of the most notable companies that collaborate with Microsoft, categorized by the nature of the partnership:\n\n### 1. Artificial Intelligence and Cloud Computing\n*   **OpenAI:** Perhaps Microsoft\u2019s most significant current partnership. Microsoft is the primary cloud provider for OpenAI and has invested billions into the company, integrating GPT-4 and DALL-E technologies into the \"Copilot\" ecosystem across Microsoft 365, Windows, and Bing.\n*   **NVIDIA:** Microsoft collaborates closely with NVIDIA to build infrastructure for AI training and inference. They integrate NVIDIA\u2019s high-end GPUs into Microsoft Azure to power AI workloads.\n*   **Oracle:** Microsoft and Oracle have a strategic interoperability partnership that allows customers to run Oracle Database services on Azure, effectively bridging the two clouds for enterprise users.\n\n### 2. Hardware and Device Manufacturers (The Windows Ecosystem)\n*   **Dell, HP, Lenovo, and ASUS:** These companies are Microsoft's primary \"OEM\" (Original Equipment Manufacturer) partners. They manufacture the hardware that runs the Windows operating system and collaborate with Microsoft on the design and optimization of PCs, especially regarding AI-integrated \"Copilot+ PCs.\"\n*   **Intel and AMD:** These semiconductor giants work with Microsoft to optimize processors for Windows. This includes close collaboration on the architecture required for modern Windows features, security protocols, and power efficiency.\n*   **Qualcomm:** Recently, Microsoft has partnered heavily with Qualcomm to push \"Windows on Arm\" architecture, moving away from a reliance solely on x86 chips to improve battery life and performance in laptops.\n\n### 3. Enterprise Software and Productivity\n*   **Adobe:** Microsoft and Adobe have a long-standing partnership to integrate Adobe\u2019s Creative Cloud and Document Cloud (PDF/Sign) services directly into Microsoft Teams and Microsoft 365.\n*   **SAP:** Microsoft collaborates with SAP to help enterprises migrate their mission-critical business systems to the Azure cloud, specifically focusing on the SAP S/4HANA platform.\n*   **Salesforce:** Despite being competitors in some CRM spaces, Microsoft and Salesforce have a deep integration partnership that links Salesforce data with Microsoft Outlook, Teams, and Excel.\n\n### 4. Gaming and Entertainment\n*   **Sony:** While they are fierce competitors in the console market (Xbox vs. PlayStation), Microsoft and Sony maintain a strategic partnership in cloud gaming infrastructure, where Sony uses Microsoft\u2019s Azure cloud services for some of its online gaming operations.\n*   **Nintendo:** Microsoft has a collaborative relationship with Nintendo, often bringing Xbox-exclusive games (like *Minecraft*, *Cuphead*, or *Ori*) to the Nintendo Switch and integrating Xbox Live features into games on Nintendo platforms.\n\n### 5. Telecommunications and Infrastructure\n*   **AT&T and Verizon:** Microsoft partners with major telecom providers to integrate 5G connectivity with Azure, enabling \"Edge Computing\" where data is processed closer to the user to reduce latency for industrial and autonomous applications.\n\n### Summary of the \"Microsoft Partner Network\"\nIt is important to note that Microsoft maintains the **Microsoft AI Cloud Partner Program** (formerly the Microsoft Partner Network), which consists of hundreds of thousands of independent software vendors (ISVs), system integrators, and managed service providers globally. Essentially, most large-scale IT consulting firms\u2014such as **Accenture, Deloitte, Infosys, and Wipro**\u2014act as primary implementation partners for Microsoft, helping other businesses adopt Microsoft\u2019s cloud and AI technologies.\n\n**In short:** Microsoft\u2019s strategy is built on being the \"connective tissue\" of the tech industry, meaning they prioritize collaboration with almost any company that provides hardware, data, or enterprise services."
+      }
+    },
+    {
+      "question": "Who did Anthropic invest in, and how much?",
+      "hops": "single",
+      "ground_truth": "Nvidia, a $20 billion investment.",
+      "key_facts": [
+        "Nvidia",
+        "20 billion"
+      ],
+      "scores": {
+        "graphrag": 0.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.0
+      },
+      "fact_recall": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.0
+      },
+      "answers": {
+        "graphrag": "Anthropic has invested $20 billion in Nvidia to support the expansion of its operations and the development of cutting-edge technology.",
+        "standard_rag": "According to Document 1, Anthropic invested 20 billion in Nvidia.",
+        "plain_llm": "As of my current knowledge, **Anthropic has not made public investments in other companies.** \n\nAnthropic is a research and AI safety company that receives massive funding *from* other entities (such as Amazon, Google, Salesforce, and Menlo Ventures) rather than acting as a venture capital firm that invests in other startups.\n\nIf you are perhaps confusing this with a recent partnership or a different company, it is worth noting that Amazon and Google have invested billions into Anthropic, but there are no reports of Anthropic acting as an investor in other businesses."
+      }
+    },
+    {
+      "question": "Who did Microsoft acquire and for how much?",
+      "hops": "single",
+      "ground_truth": "OpenAI, for $2 billion.",
+      "key_facts": [
+        "OpenAI",
+        "2 billion"
+      ],
+      "scores": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.0
+      },
+      "fact_recall": {
+        "graphrag": 1.0,
+        "standard_rag": 1.0,
+        "plain_llm": 0.0
+      },
+      "answers": {
+        "graphrag": "Microsoft acquired OpenAI for $2 billion.",
+        "standard_rag": "Answer: According to Document 1, Microsoft acquired OpenAI for 2 billion.",
+        "plain_llm": "Microsoft has made many acquisitions throughout its history. Depending on which one you are referring to, here are some of their most significant purchases:\n\n*   **Activision Blizzard:** Microsoft acquired the gaming giant in October 2023 for **$68.7 billion**. This is the largest acquisition in the company's history.\n*   **LinkedIn:** Microsoft acquired the professional networking platform in December 2016 for approximately **$26.2 billion**.\n*   **Nuance Communications:** Microsoft acquired this AI and speech technology company in March 2022 for approximately **$19.7 billion**.\n*   **Skype:** Microsoft acquired Skype in May 2011 for **$8.5 billion**.\n*   **GitHub:** Microsoft acquired the code hosting platform in October 2018 for **$7.5 billion**.\n*   **Zenimax Media (Bethesda Softworks):** Microsoft acquired the parent company of Bethesda in March 2021 for **$7.5 billion**.\n*   **Nokia\u2019s mobile phone business:** Microsoft acquired this division in April 2014 for approximately **$7.2 billion**.\n\nIf you were looking for a specific, more recent, or different acquisition, please let me know!"
+      }
+    }
+  ]
+}
